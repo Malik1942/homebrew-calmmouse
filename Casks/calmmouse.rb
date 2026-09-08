@@ -2,8 +2,7 @@ cask "calmmouse" do
   version "1.0.0"
   sha256 "3fc1406df526ced001e20772cc8bdf6a6d3cd65f8006f3fe02c0915713b8a393"
 
-  url "https://github.com/Malik1942/CalmMouse/releases/download/v#{version}/CalmMouse.zip",
-      verified: "github.com/Malik1942/CalmMouse/"
+  url "https://github.com/Malik1942/CalmMouse/releases/download/v#{version}/CalmMouse.zip"
   name "CalmMouse"
   desc "Menu bar app that stops the Magic Mouse scrolling the page when you click"
   homepage "https://calmmouse.malikzhang.com/"
