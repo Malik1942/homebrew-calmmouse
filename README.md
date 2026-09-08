@@ -4,14 +4,25 @@ A Homebrew tap for [CalmMouse](https://github.com/Malik1942/CalmMouse) — a men
 app that stops the Magic Mouse from scrolling the page every time you click.
 
 ```bash
-brew trust --tap malik1942/calmmouse
 brew install --cask malik1942/calmmouse/calmmouse
 ```
 
-The `brew trust` line is required. Homebrew refuses to load formulae and casks
-from third-party taps until you trust them, and without it `brew tap` fails with
-a misleading `Invalid cask` error rather than a permission one. Trust is recorded
-in `~/.homebrew/trust.json` and only ever covers the tap you name.
+That is the whole thing — no `brew tap` first. Homebrew taps this repository on
+demand, and naming the cask in full is itself the trust decision, so nothing
+prompts you.
+
+If you would rather add the tap up front, that path *does* need an explicit trust
+step, because Homebrew refuses to load casks from a third-party tap that you have
+not vouched for:
+
+```bash
+brew trust --tap malik1942/calmmouse
+brew tap malik1942/calmmouse
+brew install --cask calmmouse
+```
+
+Skipping the `brew trust` line there fails with `Invalid cask`, which reads like a
+syntax error in the cask rather than the permission check it actually is.
 
 ## Why a tap rather than homebrew-cask
 
