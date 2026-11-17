@@ -1,6 +1,6 @@
 cask "calmmouse" do
-  version "1.2.2"
-  sha256 "0a42f83e59cf8c4006cca9cf23f7a465e3e3ef4b5f1b465286da1a9f9638c88b"
+  version "1.3.0"
+  sha256 "b70328b19b63a54f7d37d276da28ec7343e1a0bab810d3b45e84fa859bca9d32"
 
   url "https://github.com/Malik1942/CalmMouse/releases/download/v#{version}/CalmMouse.zip"
   name "CalmMouse"
